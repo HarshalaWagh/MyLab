@@ -1,0 +1,41 @@
+package SirQuestionsString;
+import java.util.Arrays;
+
+public class AnagramString {
+	
+	  public static void main(String[] args) {
+	    String s1 = "Race";
+	    String s2 = "Care";
+	    
+	    s1 = s1.toLowerCase();
+	    s2 = s2.toLowerCase();
+
+	    // check if length is same
+	    if(s1.length() == s2.length()) {
+
+	      // convert strings to char array
+	      char[] c1 = s1.toCharArray();
+	      char[] c2 = s2.toCharArray();
+
+	      // sort the char array
+	      Arrays.sort(c1);
+	      Arrays.sort(c2);
+
+	      // if sorted char arrays are same
+	      // then the string is anagram
+	      boolean result = Arrays.equals(c1, c2);
+
+	      if(result) {
+	        System.out.println(s1 + " and " + s2 + " are anagram.");
+	      }
+	      else {
+	        System.out.println(s1 + " and " + s2 + " are not anagram.");
+	      }
+	    }
+	    else {
+	      System.out.println(s1 + " and " + s2 + " are not anagram.");
+	    }
+	  }
+	}
+
+
